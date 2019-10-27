@@ -17,9 +17,14 @@ export default class App extends NextApp {
     const { Component, pageProps } = this.props
 
     return (
+      <>
+      <head><link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" /></head>
+      
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
+      </>
+
     )
   }
 }
